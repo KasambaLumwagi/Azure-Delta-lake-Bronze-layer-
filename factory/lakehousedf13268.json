@@ -1,0 +1,9 @@
+{
+	"name": "lakehousedf13268",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f07c134c-8a67-4fd8-9c31-7e2208092118",
+		"tenantId": "30101c11-3f2e-47b3-a318-a15cc73e6a47"
+	}
+}
