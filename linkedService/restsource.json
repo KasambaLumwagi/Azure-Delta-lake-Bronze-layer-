@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://v6.exchangerate-api.com/v6/787c8d8a38d9546fdf20cc08/latest/USD",
+			"url": "https://v6.exchangerate-api.com/v6/convert?",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
