@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "lakehousedf13268"
+		},
+		"salesdbsource_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'salesdbsource'"
+		},
+		"traininglakehouse_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'traininglakehouse'"
+		},
+		"websitetrackinglogs_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'websitetrackinglogs'"
+		},
+		"httpsource_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/PacktPublishing/Data-Engineering-with-Apache-Spark-Delta-Lake-and-Lakehouse/tree/main/project/prep/iplocation/"
+		},
+		"restsource_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://v6.exchangerate-api.com/v6/787c8d8a38d9546fdf20cc08/latest/USD"
+		},
+		"traininglakehouse_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://lakehouse13268.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "lakehousedf13268_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"salesdbsource_connectionString": {
+						"value": "[parameters('salesdbsource_connectionString')]"
+					},
+					"traininglakehouse_accountKey": {
+						"value": "[parameters('traininglakehouse_accountKey')]"
+					},
+					"websitetrackinglogs_connectionString": {
+						"value": "[parameters('websitetrackinglogs_connectionString')]"
+					},
+					"httpsource_properties_typeProperties_url": {
+						"value": "[parameters('httpsource_properties_typeProperties_url')]"
+					},
+					"restsource_properties_typeProperties_url": {
+						"value": "[parameters('restsource_properties_typeProperties_url')]"
+					},
+					"traininglakehouse_properties_typeProperties_url": {
+						"value": "[parameters('traininglakehouse_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

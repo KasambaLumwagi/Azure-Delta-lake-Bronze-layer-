@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "lakehousedf13268"
+		},
+		"salesdbsource_connectionString": {
+			"value": ""
+		},
+		"traininglakehouse_accountKey": {
+			"value": ""
+		},
+		"websitetrackinglogs_connectionString": {
+			"value": ""
+		},
+		"httpsource_properties_typeProperties_url": {
+			"value": "https://github.com/PacktPublishing/Data-Engineering-with-Apache-Spark-Delta-Lake-and-Lakehouse/tree/main/project/prep/iplocation/"
+		},
+		"restsource_properties_typeProperties_url": {
+			"value": "https://v6.exchangerate-api.com/v6/787c8d8a38d9546fdf20cc08/latest/USD"
+		},
+		"traininglakehouse_properties_typeProperties_url": {
+			"value": "https://lakehouse13268.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
