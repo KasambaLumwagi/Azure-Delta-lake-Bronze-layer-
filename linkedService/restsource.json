@@ -1,13 +1,13 @@
 {
 	"name": "restsource",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://free.currconv.com/api/v7/convert?",
+			"url": "https://v6.exchangerate-api.com/v6/787c8d8a38d9546fdf20cc08/latest/USD",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
