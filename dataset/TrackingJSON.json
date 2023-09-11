@@ -1,0 +1,19 @@
+{
+	"name": "TrackingJSON",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "websitetrackinglogs",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "ecommercelogs"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

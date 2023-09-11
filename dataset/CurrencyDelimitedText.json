@@ -1,0 +1,27 @@
+{
+	"name": "CurrencyDelimitedText",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "traininglakehouse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "currency/@{item().Currency}/@ {formatDateTime(utcnow(),'yyyy')}/@ {formatDateTime(utcnow(),'MM')}/@ {formatDateTime(utcnow(),'dd')}/@ {formatDateTime(utcnow(),'HH')}",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

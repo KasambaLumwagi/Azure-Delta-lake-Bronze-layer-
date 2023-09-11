@@ -1,0 +1,13 @@
+{
+	"name": "restsource",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://v6.exchangerate-api.com/v6/convert?",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
+}
