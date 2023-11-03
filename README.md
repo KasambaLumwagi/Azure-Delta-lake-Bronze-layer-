@@ -28,3 +28,29 @@ In this project, I designed and implemented a Delta Lake-based data lakehouse to
 - Azure Blob Storage
 - REST API Integration
 - HTTP Data Source
+
+## Setting up the project on Azure
+
+1. **Create an Azure Data Factory**:
+   Make sure you have an Azure Data Factory instance created in your Azure subscription. If you don't have one, you can create it in the Azure portal.
+
+2. **Set up Azure DevOps**:
+   If you don't have an Azure DevOps organization and project, create one. You'll need it for CI/CD.
+
+3. **Connect Azure DevOps to GitHub**:
+   In your Azure DevOps project, connect it to your GitHub repository. This allows you to access your ADF pipeline code from Azure DevOps.
+
+4. **Create a Build Pipeline**:
+   Set up a build pipeline in Azure DevOps that will compile and package your ADF pipeline code from your GitHub repository. Depending on your ADF project, this might involve tasks like publishing ARM templates, building code, or packaging linked services.
+
+5. **Create a Release Pipeline**:
+   Create a release pipeline that defines how your ADF code is deployed to your Azure Data Factory. This typically involves tasks like deploying ARM templates and making any necessary configurations.
+
+6. **Configure CI/CD Triggers**:
+   Set up continuous integration and continuous deployment triggers so that your ADF pipelines are automatically updated whenever changes are pushed to your GitHub repository. This ensures that your ADF environment is always up to date with your repository.
+
+7. **Run the Pipeline**:
+   Trigger the CI/CD pipeline to run, which will deploy your ADF pipelines to Azure. This can be manually initiated or triggered automatically when changes are pushed to your GitHub repository.
+
+8. **Monitor and Troubleshoot**:
+   Monitor the pipeline execution for any errors or issues and troubleshoot them as needed.
